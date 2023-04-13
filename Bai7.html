@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Thông số tính giá cước: </h3>
+    <p>Phí thuê bao bắt buộc: 25000 VND</p>
+    <p>50 phút đầu tiên: 600 VND / phút</p>
+    <p>150 phút tiếp theo: 400 VND / phút</p>
+    <p>Sau 200 phút: 200 VND / phút</p> <br> <br>
+    <label>Nhập số phút gọi của hộ gia đình: </label>
+    <label><input type="number" id ="minute" value=" "></label>
+    <input type="button" name = "TinhPhi" onclick="tinhPhi()" value="Tính Phí">
+    <p id="cuoc" ></p>
+    <script>
+        function tinhPhi(){
+            let minute = document.getElementById('minute').value;
+            let phiCoDinh = 25000;
+            let phi;
+            if (minute > 200){
+                phi = 50 * 600 + 150 * 400 + (minute - 200) * 200 + phiCoDinh;
+            } else if (minute > 50){
+                phi = 50 * 600 + (minute - 50) * 400 + phiCoDinh;
+            } else{
+                phi = minute * 600 + phiCoDinh;
+            }
+            document.getElementById('cuoc').innerHTML = ("Cước điện thoại của hộ gia đình là: " + phi + " VND");
+    }
+    </script>
+</body>
+</html>

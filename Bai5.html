@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt(''));
+        let b = parseFloat(prompt(''));
+        let c = parseFloat(prompt(''));
+        let dtb = (a + b + c) / 3;
+        if (dtb < 3.5){
+            alert('Học lực xếp loại: Kém');
+        } else if (dtb >= 3.5 && dtb < 5){
+            alert('Học lực xếp loại: Yếu');
+         } else if (dtb >= 5 && dtb < 6.5){
+            alert('Học lực xếp loại: Trung Bình');
+        } else if (dtb >= 6.5 && dtb < 8){
+            alert('Học lực xếp loại: Khá');
+        } else {
+            alert('Học lực xếp loại: Giỏi');
+        }
+    </script>
+</body>
+</html>
